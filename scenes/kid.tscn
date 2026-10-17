@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b3nqwmgqxwaco"]
+
+[ext_resource type="Texture2D" uid="uid://bm2btnxsy7i17" path="res://temp-assets/kid/Kid.png" id="1_844vu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mgijq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_844vu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Kid" type="AnimatedSprite2D" unique_id=1356075101]
+texture_filter = 1
+scale = Vector2(6.34375, 6.875)
+sprite_frames = SubResource("SpriteFrames_mgijq")
+offset = Vector2(0.3569641, -12.706039)

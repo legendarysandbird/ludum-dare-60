@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://coi66l3f12o8i"]
+
+[ext_resource type="Script" uid="uid://buo71742kebul" path="res://scenes/Spawner.gd" id="1_ik2nu"]
+
+[node name="Spawner" type="Node2D" unique_id=161647364]
+script = ExtResource("1_ik2nu")
+metadata/_edit_vertical_guides_ = [-330.0]
+
+[node name="Base" type="ColorRect" parent="." unique_id=898038044]
+offset_right = 108.99997
+offset_bottom = 14.0
+pivot_offset = Vector2(-166, -66)
+color = Color(1, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=2009572085]
+wait_time = 2.0
+autostart = true
+
+[node name="Anchor" type="Node2D" parent="." unique_id=1223709713]
+position = Vector2(55.1, 0)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
