@@ -2,12 +2,25 @@
 
 [ext_resource type="Script" uid="uid://b4wkth5hu5bvd" path="res://World/WorldController.gd" id="1_4lm7i"]
 [ext_resource type="PackedScene" uid="uid://c5yqhpftt7ynm" path="res://World/Camera/camera.tscn" id="2_ggpjj"]
+[ext_resource type="Material" uid="uid://cvxhbp7xwl0yq" path="res://temp-assets/materials/mat_dirt.tres" id="3_8wu8h"]
+[ext_resource type="Material" uid="uid://cq02lexk5daw3" path="res://temp-assets/materials/mat_grass.tres" id="4_8bkow"]
+[ext_resource type="PackedScene" uid="uid://buo7bmxhvlre8" path="res://UI/world_hud.tscn" id="5_8bkow"]
 
 [sub_resource type="Environment" id="Environment_wj5hs"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7veuk"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ggpjj"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wj5hs"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_m4et7"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nvlkt"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_08m2b"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Yard" type="Node3D" unique_id=580333579 node_paths=PackedStringArray("spawn_point")]
@@ -21,18 +34,68 @@ environment = SubResource("Environment_wj5hs")
 transform = Transform3D(1, 0, 0, 0, -0.60534376, 0.7959642, 0, -0.7959642, -0.60534376, 0.2983513, 9.953035, 0)
 
 [node name="CameraContainer" parent="." unique_id=1848111924 instance=ExtResource("2_ggpjj")]
-transform = Transform3D(0.99999994, 0, 0, 0, 0.93969256, 0.34202012, 0, -0.3420201, 0.9396926, 0, 5, 0)
+transform = Transform3D(0.99999994, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 5, 7.268077)
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=1611948390]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3060284, 2.3419237, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.342, 0)
 gizmo_extents = 1.0
 
-[node name="Ground" type="StaticBody3D" parent="." unique_id=2057705367]
+[node name="Ground_back" type="StaticBody3D" parent="." unique_id=2057705367]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=604261579]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground_back" unique_id=604261579]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
 mesh = SubResource("BoxMesh_7veuk")
+surface_material_override/0 = ExtResource("3_8wu8h")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1397595521]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground_back" unique_id=1397595521]
 transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_ggpjj")
+
+[node name="Ground_front" type="StaticBody3D" parent="." unique_id=18260136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground_front" unique_id=2043578373]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("BoxMesh_7veuk")
+surface_material_override/0 = ExtResource("4_8bkow")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground_front" unique_id=1662934981]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ggpjj")
+
+[node name="House" type="StaticBody3D" parent="." unique_id=1591559035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.603378)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="House" unique_id=986191370]
+transform = Transform3D(12, 0, 0, 0, 4, 0, 0, 0, 6, 0, 2.5, 0)
+mesh = SubResource("BoxMesh_wj5hs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House" unique_id=1836942322]
+transform = Transform3D(12, 0, 0, 0, 4, 0, 0, 0, 6, 0, 2.5, 0)
+shape = SubResource("ConcavePolygonShape3D_m4et7")
+
+[node name="Fence" type="StaticBody3D" parent="." unique_id=1433677844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1.66, -9.7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fence" unique_id=1732040339]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_nvlkt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence" unique_id=1747788442]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_08m2b")
+
+[node name="Fence2" type="StaticBody3D" parent="." unique_id=2065187676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.66, -9.7)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Fence2" unique_id=432577029]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = SubResource("BoxMesh_nvlkt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fence2" unique_id=429465094]
+transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_08m2b")
+
+[node name="Timer" type="Timer" parent="." unique_id=1343171552]
+
+[node name="WorldHud" parent="." unique_id=1737151952 instance=ExtResource("5_8bkow")]

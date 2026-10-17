@@ -4,6 +4,8 @@ extends Node3D
 #timer or stamina
 @export var spawn_point: Marker3D
 
+@onready var timer: Timer = $Timer
+
 const playerScene = preload("res://World/Character/character.tscn")
 
 func _ready() -> void:

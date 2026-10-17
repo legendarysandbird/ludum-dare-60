@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://buo7bmxhvlre8"]
+
+[node name="WorldHud" type="Node2D" unique_id=1737151952]
+
+[node name="Control" type="Control" parent="." unique_id=1333019014]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1150.0
+offset_bottom = 650.0
+
+[node name="BoxContainer" type="BoxContainer" parent="Control" unique_id=880545075]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 59.0
+
+[node name="TimerLabel" type="Label" parent="Control/BoxContainer" unique_id=825073409]
+layout_mode = 2
+text = "60"
