@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dw0w07e42q0s0"]
+
+[ext_resource type="Script" uid="uid://b4wkth5hu5bvd" path="res://World/WorldController.gd" id="1_4lm7i"]
+[ext_resource type="PackedScene" uid="uid://c5yqhpftt7ynm" path="res://World/Camera/camera.tscn" id="2_ggpjj"]
+
+[sub_resource type="Environment" id="Environment_wj5hs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7veuk"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ggpjj"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Yard" type="Node3D" unique_id=580333579 node_paths=PackedStringArray("spawn_point")]
+script = ExtResource("1_4lm7i")
+spawn_point = NodePath("Marker3D")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=791516637]
+environment = SubResource("Environment_wj5hs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=470370695]
+transform = Transform3D(1, 0, 0, 0, -0.60534376, 0.7959642, 0, -0.7959642, -0.60534376, 0.2983513, 9.953035, 0)
+
+[node name="CameraContainer" parent="." unique_id=1848111924 instance=ExtResource("2_ggpjj")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.93969256, 0.34202012, 0, -0.3420201, 0.9396926, 0, 5, 0)
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=1611948390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3060284, 2.3419237, 0)
+gizmo_extents = 1.0
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=2057705367]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=604261579]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_7veuk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1397595521]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_ggpjj")
